@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Avenir', sans-serif;
+}
+h1,h2,h3,h4 {
+    font-family: 'Source Serif Pro', serif;
+}
+h1 {
+    font-size: 58px;
+    line-height: 64px;
+    font-weight: 600;
+    font-style: normal;
+}
+h3 {
+    font-style: normal;
+font-weight: 600;
+font-size: 38px;
+line-height: 46px;
+}
+p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+@font-face {
+    font-family: "Avenir";
+    font-display: swap;
+    src: url("fonts/Avenir.otf") format("otf");
+    font-weight: 400;
+    font-style: normal;
+}
+  
+
+.wrapper {
+    max-width: 1277px;
+    margin: 0 auto;
+}
+
+
+
+header {
+    background-color: #14161C;
+    padding: 37px 0;
+    height: 120px;
+    box-sizing: border-box;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_nav ul {
+    display: flex; 
+    gap: 31px;
+    margin-top: -4px;
+}
+.header_nav ul li {
+
+}
+.header_nav ul li a {
+    color: #AAAAAA;
+    opacity: 0.6;
+    font-size: 17px;
+    line-height: 23.5px
+}
+
+main {
+
+}
+
+.main_page {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(700, 5px);
+    background: url(../images/main_screen_bg.png) top center no-repeat, 
+    linear-gradient(90deg, rgba(194,221,218,1) 0%, rgba(188,216,211,1) 100%);
+    background-size: 100%;
+}
+.color_block {
+    mix-blend-mode: overlay;
+}
+.purple_color_block {
+    background: #A228E7;
+}
+.green_color_block {
+    background: #D0EB39;
+    mix-blend-mode: soft-light !important;
+    opacity: 0.7;
+}
+.blue_color_block {
+    background: #4EC4FE;
+}
+.main_screen_left {
+    grid-row-start: 1; 
+    grid-row-end: 121; 
+    display: grid;
+    grid-template-columns: 1fr 355px;
+}
+.main_screen_right {
+    grid-row-start: 1; 
+    grid-row-end: 169; 
+    display: grid;
+    grid-template-columns: 440px 1fr;
+}
+.use_psychology {
+    grid-row-start: 121; 
+    grid-row-end: 234; 
+}
+
+.block_line_gradient .wrapper{
+    max-width: 640px;
+
+    box-sizing: border-box;
+}
+.content_text_left .wrapper {
+    padding: 80px;
+    padding-left: 0;
+}
+.content_text_right .wrapper {
+    padding: 80px;
+    padding-right: 0;
+}
+
+
+
+.grey_bg {
+    background-color: #555D61;
+    color: #fff;
+}
+.grey_bg p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 34px;
+}
+.dark_bg {
+    background-color: #1F232B;
+    color: #fff;
+}
+.light_grey_bg {
+    background-color: #E2E2E2;
+    color: #14161C;   
+}
+
+.psychology_image {
+    background: url(../images/girls.jpg) -320px -62px no-repeat;
+    grid-row-start: 169; 
+    grid-row-end: 309; 
+    max-height: 720px;
+}
+.image_center_block {
+    padding: 90px 110px;
+}
+.image_center_block img {
+    width: 100%;
+}
+.content_left .wrapper {
+    margin-left: auto;
+    margin-right: 0;
+    width: fit-content;
+}
+.content_right .wrapper {
+    margin-left: 0;
+    margin-right: auto;
+    width: fit-content;
+}
+.brain_image_block {
+    grid-row-start: 234; 
+    grid-row-end: 402;
+}
+.psychological_theories_block {
+    grid-row-start: 309; 
+    grid-row-end: 418;
+}
+
+.block_image_lines {
+    display: grid;
+    grid-template-columns: 440px 1fr;
+}
+
+/*////////////////////////////////*/
+.link_to {
+    color: #8E52FF !important;
+    position: relative;
+    padding-right: 21px;
+}
+.link_to:before {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    right: 0;
+    top: 3px;
+    background: url(../images/icons/icon_arrow_right.svg) center no-repeat;
+}
+.line_gradient {
+    width: 320px;
+    height: 2px;
+    margin: 30px 0;
+}
+.line_gradient--yellow {
+    background: linear-gradient(90deg, #4AFF68 0.03%, #C2E700 48.64%, #E0BC11 73.02%, #FF9022 100%);
+}
+.line_gradient--red {
+    background: linear-gradient(270deg, #F48863 1.84%, #EB6B66 26.17%, #D5236E 78.55%, #CC0372 100%);
+}
+
+.link_button {
+    border: 1px solid #4EC4FE;
+    position: relative;
+    color: #4EC4FE;
+    width: 218px;
+    height: 50px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 23px;
+}
+.link_button:hover img {
+    transform: translateX(10px);
+}
+.link_button img {
+    margin-left: 4px;
+    transition: 0.3s ease;
+
+}
+.btn_nav_menu {
+    background: transparent;
+    border: none;
+    outline: none;
+    display: none;
+    position: relative;
+    top: -9px;
+    left: -4px;
+
+}
+
+
+/*///////////////////*/
+@media(max-width: 1300px) {
+    h1 {
+        font-size: 48px;
+    }
+    h1 br, h3 br {
+        display: none
+    }
+    h3 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 15px;
+    }
+    .grey_bg p {
+        font-size: 17px;
+    }
+    .wrapper {
+        padding: 0 30px;
+    }
+    .block_line_gradient .wrapper {
+        padding: 40px;
+    }
+    .image_center_block {
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image_center_block .wrapper {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media(max-width: 1000px) {
+
+    .header_nav {
+        display: none;
+    } 
+    .btn_nav_menu {
+        display: block;
+    }
+    .main_screen_left, .main_screen_right {
+        grid-row-start: 1; 
+        grid-row-end: 90;
+    }
+
+    .main_screen_left {
+        grid-template-columns: 1fr 49.2%;
+    }
+    .main_screen_right {
+        grid-template-columns: 1fr 39.36%;
+    }
+    .block_line_gradient .wrapper {
+        max-width: 100%;
+        padding: 30px;
+    }
+    .block_line_gradient {
+        grid-column-start: 1; 
+        grid-column-end: 3;
+    }
+    .use_psychology {
+
+        grid-row-start: 90; 
+        grid-row-end: 182;
+    }
+    .psychology_image {
+        grid-column-start: 2; 
+        grid-column-end: 3;
+        grid-row-start: 182; 
+        grid-row-end: 240;
+        background-size: 200%;
+        background-position: -160px top;
+        grid-template-columns: 1fr 39.36%;
+    }
+    .brain_image_block {
+        grid-column-start: 1; 
+        grid-column-end: 2;
+        grid-row-start: 182; 
+        grid-row-end: 240;        
+    }
+    .image_center_block .wrapper {
+        width: 50%;
+    }
+    .psychological_theories_block {
+        grid-row-start: 240; 
+        grid-row-end: 320;   
+    }
+
+}
+@media(max-width: 650px) { 
+    header {
+        padding: 21px 21px;
+        height: 70px;
+    }
+    header .wrapper {
+        padding: 0;
+    }
+    .header_logo {
+        transform-origin: left top;
+        transform: scale(0.65);
+    }
+    .wrapper {
+        padding: 0 30px;
+    }
+    h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    h3 {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 160%;
+    }
+    .main_screen {
+        height: 220px;
+    }
+    .main_page {
+        background-size: 114%;
+    }
+    .grey_bg p {
+        font-size: 16px;
+        line-height: 160%;
+    }
+    .line_gradient {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .link_button {
+        width: 100%;
+        margin-top: 23px;
+    }
+    .main_page {
+        grid-template-rows: auto;
+    }
+    .block_image, .image_center_block   {
+        max-height: 180px;
+    }
+    .image_center_block {
+        box-sizing: border-box;
+    }
+    .image_center_block .wrapper {
+        width: 100%;
+    }
+    .psychology_image {
+        background-position: -80px -10px;
+    }
+
+}
