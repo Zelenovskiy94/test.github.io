@@ -20,6 +20,14 @@ font-weight: 600;
 font-size: 38px;
 line-height: 46px;
 }
+
+h6 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: capitalize;
+}
 p {
     font-style: normal;
     font-weight: normal;
@@ -62,30 +70,90 @@ header .wrapper {
 
 .header_nav ul {
     display: flex; 
-    gap: 31px;
     margin-top: -4px;
 }
 .header_nav ul li {
-
+    margin-right: 31px;
 }
-.header_nav ul li a {
+.header_nav ul li:last-child {
+    margin-right: 0;
+}
+header ul li a {
     color: #AAAAAA;
     opacity: 0.6;
     font-size: 17px;
-    line-height: 23.5px
+    line-height: 23.5px;
+    transition: 0.3s ease;
 }
-
-main {
-
+header ul li a:hover {
+    color: #fff;
+    opacity: 1;
+}
+.nav_menu_mobile {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 999;
+    overflow: auto;
+    transition: 0.5s ease;
+    transform: translateX(100%);
+}
+.nav_menu_mobile.active {
+    transform: translateX(0);
+}
+.btn_close {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    width: 20px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav_menu_mobile-top {
+    background-color: #14161C;
+    display: flex;
+    flex-direction: column;
+    padding:30px;
+    padding-top: 70px;
+    
+}
+.nav_menu_mobile-top li {
+    margin-bottom: 30px;
+}
+.nav_menu_mobile-top li:last-child {
+    margin-bottom: 30px;
+}
+.nav_menu_mobile-bottom {
+    background-color: #1F232B;
+    padding:30px;
+}
+.nav_menu_mobile-bottom p {
+    font-weight: 400;
+font-size: 17px;
+line-height: 23px;
+color: #AAAAAA;
+}
+.nav_menu_mobile-bottom .contact_info {
+    margin-top: -4px;
+}
+.nav_menu_mobile-bottom .contact_info div {
+    margin-bottom: 30px;
 }
 
 .main_page {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(700, 5px);
+    grid-template-rows: repeat(600, 5px);
     background: url(../images/main_screen_bg.png) top center no-repeat, 
     linear-gradient(90deg, rgba(194,221,218,1) 0%, rgba(188,216,211,1) 100%);
     background-size: 100%;
+    margin-bottom: -44px;
 }
 .color_block {
     mix-blend-mode: overlay;
@@ -148,6 +216,10 @@ main {
     background-color: #1F232B;
     color: #fff;
 }
+.strong_dark_bg {
+    background-color: #1C1E24;
+    color: #fff;
+}
 .light_grey_bg {
     background-color: #E2E2E2;
     color: #14161C;   
@@ -177,19 +249,208 @@ main {
 }
 .brain_image_block {
     grid-row-start: 234; 
-    grid-row-end: 402;
+    grid-row-end: 392;
 }
 .psychological_theories_block {
     grid-row-start: 309; 
     grid-row-end: 418;
+}
+.supporting_differences {
+    grid-row-start: 392; 
+    grid-row-end: 502; 
+}
+.supporting_differences_image {
+    grid-row-start: 418; 
+    grid-row-end: 540;
+}
+.ball_image_block {
+    grid-row-start: 502;
+    grid-row-end: 645;
+}
+.overcome_block {
+    grid-row-start: 540;
+    grid-row-end: 654;
+}
+.supporting_differences_image img {
+    left: -150px;
+    top: -160px;
 }
 
 .block_image_lines {
     display: grid;
     grid-template-columns: 440px 1fr;
 }
+.block_image {
+    position: relative;
+    overflow: hidden;
+}
+.block_image img {
+    position: absolute;
+}
+
+
+footer {
+    background-color: #1F232B;
+}
+.footer_top {
+    background: url(../images/bg_footer.png) 120% -40% no-repeat,#555D61;
+    background-size: contain;
+    text-align: center;
+    padding-top: 204px;
+    padding-bottom: 156px;
+
+}
+.footer_top .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+.footer_top p {
+    max-width: 675px;
+    color: #AAAAAA;
+    margin-top: 9px;
+}
+.footer_top .link_button {
+    margin-top: 25px;
+}
+
+.footer_bottom {
+    color: #AAAAAA;
+    padding-top: 148px;
+    padding-bottom: 176px;
+    position: relative;
+}
+.footer_logo {
+    position: absolute;
+    left: 0;
+    top: -39px;
+    width: 29.65%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    padding-right: 116px;
+    padding-left: 15px;
+    min-width: 427px;
+    box-sizing: border-box;
+    background-color: #14161C;
+}
+.footer_logo img {
+    margin-left: auto;
+}
+.footer_bottom .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 18px;
+    box-sizing: border-box;
+    position: relative;
+}
+.footer_bottom p{
+    font-size: 17px;
+    line-height: 23px;
+}
+.contact_info {
+    max-width: 290px;
+    margin-top: 40px;
+}
+.contact_info div {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+.contact_info div img {
+    margin-right: 13px;
+}
+.footer_menu ul {
+    display: grid;
+    flex-direction: column;
+    gap: 50px;
+    flex-wrap: wrap;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 135px;
+    max-height: 316px;
+    
+    margin-left: 98px;
+
+}
+
+.footer_menu a {
+    color: #AAAAAA;
+    font-size: 17px;
+    line-height: 23px;
+}
+.newsletter_block div {
+    display: flex;
+    margin-top: 20px;
+}
+.footer_contact_us {
+    margin-left: 0;
+    margin-right: 18px;
+}
+.footer_contact_us input {
+    background-color: #14161C;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    width: 172px;
+    height: 40px;
+}
+.footer_contact_us .btn_sent_to {
+    margin-left: 10px;
+}
+.btn_sent_to {
+    border: 1px solid #8E52FF;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow_us {
+    margin-top: 87px;
+}
+.media_links {
+    display: flex;
+    margin-top: 20px;
+}
+.media_links a {
+    width: 40px;
+    height: 40px;
+    background: #14161C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.media_links a:last-child {
+    margin-right: 0;
+}
+
+.copyright {
+
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+}
+.copyright p{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #555D61;
+}
 
 /*////////////////////////////////*/
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+input {
+    border: none;
+    outline: none;
+}
 .link_to {
     color: #8E52FF !important;
     position: relative;
@@ -215,6 +476,12 @@ main {
 .line_gradient--red {
     background: linear-gradient(270deg, #F48863 1.84%, #EB6B66 26.17%, #D5236E 78.55%, #CC0372 100%);
 }
+.line_gradient--purple {
+    background: linear-gradient(90deg, #4A34FF 0%, #771DFF 63.02%, #930EFF 99.58%);
+}
+.line_gradient--blue {
+    background: linear-gradient(90deg, #03B0FF 0%, #2C5AED 55.21%, #4031E5 100%);
+}
 
 .link_button {
     border: 1px solid #4EC4FE;
@@ -232,6 +499,10 @@ main {
     font-size: 17px;
     line-height: 23px;
 }
+.link_button-purple {
+    border-color: #8E52FF;
+    color: #8E52FF;
+}
 .link_button:hover img {
     transform: translateX(10px);
 }
@@ -248,9 +519,13 @@ main {
     position: relative;
     top: -9px;
     left: -4px;
-
 }
-
+/* .main_screen {
+    min-height: 600px;
+}
+.main_page {
+    grid-template-rows: auto;
+} */
 
 /*///////////////////*/
 @media(max-width: 1300px) {
@@ -329,8 +604,7 @@ main {
         grid-template-columns: 1fr 39.36%;
     }
     .brain_image_block {
-        grid-column-start: 1; 
-        grid-column-end: 2;
+
         grid-row-start: 182; 
         grid-row-end: 240;        
     }
@@ -340,6 +614,27 @@ main {
     .psychological_theories_block {
         grid-row-start: 240; 
         grid-row-end: 320;   
+    }
+    .supporting_differences_image {
+        grid-column-start: 1; 
+        grid-column-end: 3;
+        grid-row-start: 320; 
+        grid-row-end: 392; 
+    }
+    .supporting_differences {
+        grid-row-start: 392;
+        grid-row-end: 482;
+
+    }
+    .ball_image_block {
+        grid-column-start: 1; 
+        grid-column-end: 3;
+        grid-row-start: 482;
+        grid-row-end: 560;
+    }
+    .overcome_block {
+        grid-row-start: 560;
+        grid-row-end: 638;
     }
 
 }
@@ -375,6 +670,7 @@ main {
     }
     .main_page {
         background-size: 114%;
+        grid-template-rows: auto;
     }
     .grey_bg p {
         font-size: 16px;
@@ -386,12 +682,9 @@ main {
     }
     .link_button {
         width: 100%;
-        margin-top: 23px;
+        margin-top: 20px;
     }
-    .main_page {
-        grid-template-rows: auto;
-    }
-    .block_image, .image_center_block   {
+    .brain_image_block   {
         max-height: 180px;
     }
     .image_center_block {
@@ -402,6 +695,10 @@ main {
     }
     .psychology_image {
         background-position: -80px -10px;
+    }
+    .supporting_differences_image {
+        height: 316px;
+        grid-template-columns: 1fr 39.36%;
     }
 
 }
