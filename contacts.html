@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -61,76 +62,51 @@
             </nav>
         </div>
     </header>
-    <main class="main_page">
-        <section class="main_screen main_screen_left">
-            <div></div>
-            <div class="color_block purple_color_block"></div>
+    <main>
+        <section class="text_image_top text_top">
+            <section class="grey_bg block_line_gradient content_left content_text_left">
+                <div class="wrapper">
+                    <h1>Contact us</h1>
+                    <div class="line_gradient line_gradient--purple-blue"></div>
+                </div>
+            </section>
+            <section class="grey_bg block_line_gradient content_right content_text_right">
+                <div class="wrapper">
+                    <div class="contact_info">
+                        <div class="contact_info_phone">
+                            <img src="images/icons/Mobile_contact.svg" alt="mobile">
+                            <p><a href="tel:(248) 254 3445">(248) 254 3445</a></p>
+                        </div>
+                        <div class="contact_info_adress">
+                            <img src="images/icons/Pin_contact.svg" alt="pin">
+                            <p>34505 W. 12 Mile Road, Suite 210 Farmington Hills, MI 48331</p>
+                        </div>
+                        <div class="contact_info_work_time">
+                            <img src="images/icons/Clock_contact.svg" alt="clock">
+                            <p>9:30am - 4:30pm</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
-        <section class="main_screen main_screen_right">
-            <div class="color_block green_color_block"></div>
-            <div class="color_block blue_color_block"></div>
-        </section>
-        <section class="grey_bg block_line_gradient content_left content_text_left use_psychology">
+        <section class="main_content contact_content single_content">
             <div class="wrapper">
-                <h1>We use psychology <br>to improve education</h1>
-                <div class="line_gradient line_gradient--yellow"></div>
-                <p>We help organizations and employees manage change and transitions. We create organizational infrastructure, support strategic planning processes and provide organizational and operational systems. </p>
-                <a href="#" class="link_button">Our Services<img src="images/icons/icon_arrow_right_blue.svg"></a>
-            </div>
-        </section>
-        <section class="block_image block_image_lines psychology_image">
-            <div></div>
-            <div class="color_block blue_color_block"></div>
-        </section>
-        <section class="dark_bg image_center_block content_left brain_image_block">
-            <div class="wrapper">
-                <img src="images/Brain.png" title="brain">
-            </div>
-        </section>
-        <section class="light_grey_bg block_line_gradient content_right content_text_right psychological_theories_block">
-            <div class="wrapper">
-                <h3>We apply psychological theories, principles & <br>practices to organizations</h3>
-                <div class="line_gradient line_gradient--red"></div>
-                <p>We contribute to your organization’s success by improving the  performance, satisfaction, and well being of your employees. We work on employee behaviors and attitudes and improve them through hiring practices, training, feedback, management systems, leadership support and development.</p>
-                <a href="#" class="link_button link_button-purple">Leaders<img src="images/icons/icon_arrow_right.svg"></a>
-            </div>
-        </section>
-        <section class="strong_dark_bg block_line_gradient content_left content_text_left supporting_differences">
-            <div class="wrapper">
-                <h3>We are highly focused on supporting differences</h3>
-                <div class="line_gradient line_gradient--blue"></div>
-                <p>We implement practices from cognitive, neuroscience and behavioral perspectives to improve learning processes. We focus on supporting differences in intelligence, learning style, mastery, cognitive development, affect, motivation, self-concept as they relate to improved learning. We use testing, measurement, research-based effective instructional practices, reflection, personal and professional development to enhance educational activities and outcomes. </p>
-                <a href="#" class="link_button">Opportunities<img src="images/icons/icon_arrow_right_blue.svg"></a>
-            </div>
-        </section>
-        <section class="block_image block_image_lines content_right supporting_differences_image">
-            <img src="images/iStock.png" title="istock">
-            <div></div>
-            <div class="color_block blue_color_block"></div>
-        </section>
-        <section class="dark_bg image_center_block content_left ball_image_block">
-            <div class="wrapper">
-                <img src="images/ball.png" title="ball">
-            </div>
-        </section>
-        <section class="light_grey_bg block_line_gradient content_right content_text_right overcome_block ">
-            <div class="wrapper">
-                <h3>Overcome cultural,<br>structural & leadership obstacles that are in the way</h3>
-                <div class="line_gradient line_gradient--purple"></div>
-                <p>Everything we do in each school is in the spirit of partnership, communicating and working with school personnel to create a positive, cooperative environment. We help organizations overcome the cultural, structural, leadership and instructional obstacles that stand in the way of achieving their strategic goals.</p>
-                <a href="#" class="link_button link_button-purple">About Us<img src="images/icons/icon_arrow_right.svg"></a>
+                <form class="contact_form">
+                    <h4>Send us a message</h4>
+                    <label for="input_name">Full name</label>
+                    <input name="name" id="input_name" type="text">
+                    <label for="input_email">Email</label>
+                    <input name="email" id="input_email" type="text">
+                    <label for="input_telephone">Telephone</label>
+                    <input name="telephone" id="input_name" type="text">
+                    <label for="input_message">Message</label>
+                    <textarea name="Message" id="input_message" type="text"></textarea>
+                    <button type="submit" class="link_button link_button-purple_light" type="submit">Send<img src="images/icons/icon_arrow_right_purple.svg" alt="arrow"></button>
+                </form>
             </div>
         </section>
     </main>
     <footer>
-        <section class="footer_top grey_bg">
-            <div class="wrapper">
-                <h1>Get started today</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus accumsan, varius eget sed accumsan, sed tempor sem pulvinar.</p>
-                <a class="link_button link_button-purple_light_footer" href="">Contact us<img src="images/icons/icon_arrow_right_bottom.svg" alt="arrow"></a>
-            </div>
-
-        </section>
         <section class="footer_bottom">
             <div class="footer_logo">
                 <img src="images/logo.svg" alt="logo">
